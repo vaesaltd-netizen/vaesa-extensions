@@ -3,23 +3,20 @@
   "name": "Pancake to CRM",
   "version": "1.5.0",
   "description": "Lấy thông tin khách hàng từ Pancake và gửi về CRM",
-
+  "update_url": "https://vaesaltd-netizen.github.io/vaesa-extensions/updates.xml",
   "permissions": [
     "activeTab",
     "storage"
   ],
-
   "host_permissions": [
     "https://pancake.vn/*",
     "https://vaesa.soly.com.vn/*",
     "https://script.google.com/*",
     "https://vaesa.foxia.vn/*"
   ],
-
   "background": {
     "service_worker": "background.js"
   },
-
   "content_scripts": [
     {
       "matches": ["https://pancake.vn/*"],
@@ -28,14 +25,12 @@
       "run_at": "document_start"
     }
   ],
-
   "web_accessible_resources": [
     {
       "resources": ["injected.js"],
       "matches": ["https://pancake.vn/*"]
     }
   ],
-
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
